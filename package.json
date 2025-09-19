@@ -1,0 +1,34 @@
+{
+  "name": "AI-NEUROSCIENCE-2",
+  "version": "2.0.0",
+  "description": "Complete AI Neuroscience Research CMS with Membership Management",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:frontend": "cd frontend && npm start",
+    "dev:backend": "cd backend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "start": "cd backend && npm start",
+    "install:all": "npm install && cd frontend && npm install && cd ../backend && npm install",
+    "test": "concurrently \"npm run test:frontend\" \"npm run test:backend\"",
+    "test:frontend": "cd frontend && npm test",
+    "test:backend": "cd backend && npm test",
+    "deploy": "./scripts/deploy.sh",
+    "setup": "./scripts/setup.sh",
+    "migrate": "cd backend && npm run migrate",
+    "seed": "cd backend && npm run seed"
+  },
+  "keywords": [
+    "ai",
+    "neuroscience",
+    "research",
+    "cms",
+    "academic",
+    "membership"
+  ],
+  "author": "prospong",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
